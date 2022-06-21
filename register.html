@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- link stylesheet index.css -->
+    <link rel="stylesheet" href="static/styles/index.css">
+  <title>REGISTRATION PAGE</title>
+</head>
+<body>
+  <script src="static/scripts/app.js"></script>
+  <div id="error">
+          
+  </div>
+  <div class="background">
+    
+    <div class="container">
+
+      <div class="row justify-content-center">
+  
+        <div class="col-6">
+          <form class="loginForm" method="POST" onsubmit="submitForm(event)">
+            <div class="formIcon"><i class="fa fa-user-circle"></i></fa-user-circle></div>
+            <h3 class="heading">REGISTRATION FORM</h3>
+            <div class="block">
+              <span class="inputIcons"><i class="fa fa-envelope"></i></span>
+              <input required class="formInputs email" id="email" name="email" type="email" placeholder="VIT email ID">
+            </div>
+            <div class="block">
+              <span class="inputIcons"><i class="fa fa-lock"></i></span>
+              <input required class="formInputs " id="name" name="name" type="text" placeholder="Name">
+            </div>
+            <div class="block">
+                <span class="inputIcons"><i class="fa fa-lock"></i></span>
+                <input required class="formInputs " id="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                name="number" type="text" pattern=".{10,10}" placeholder="Number">
+            </div>
+            <div class="block">
+                <span class="inputIcons"><i class="fa fa-lock"></i></span>
+                <input required id="password" class="formInputs password" name="password" type="password" placeholder="Password">
+            </div>
+
+            <input class="btn login" type="submit" id="loginBtn">Register</input>
+            <p></p>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="./server.js"></script> -->
+  
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+.background{
+            
+    background:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.col{
+    margin: 0 auto;
+}
+.loginForm{
+    font-family: 'lato', sans-serif;
+    text-align: center;
+}
+.row
+.loginForm .formIcon{
+    color: #fff;
+    font-size: 100px;
+    line-height: 85px;
+    margin: 0 0 13px;
+}
+.loginForm .heading{
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 35px 0;
+}
+.loginForm .block{
+    margin: 0 0 10px;
+    position: relative;
+}
+.loginForm .inputIcons{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #777;
+}
+.loginForm .formInputs{
+    width: 100%;
+    color: #555;
+    background-color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    height: 37px;
+    padding: 2px 15px 2px 35px;
+    border: none;
+    border-radius: 50px;
+}
+.loginForm .formInputs::placeholder{
+    color: rgba(0,0,0,0.7);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.loginForm .login{
+    color: #fff;
+    background-color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
