@@ -1,7 +1,7 @@
 // submit form to backend using axios
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
-
+const BACKEND_URL = "https://guarded-taiga-90409.herokuapp.com"
 const submitForm = (e) => {
   console.log("submitForm");
 
@@ -11,7 +11,7 @@ const submitForm = (e) => {
   const phone = document.getElementById("number").value;
   const password = document.getElementById("password").value;
 
-  const url = "http://localhost:8000/api/auth/register";
+  const url = `${BACKEND_URL}/api/auth/register`;
   const method = "POST";
   const resp = axios({
     method: "POST",
@@ -32,7 +32,7 @@ const submitForm = (e) => {
           User Registration Successful!!
       </div>`;
       setTimeout(function () {
-        window.location.href = "http://127.0.0.1:5500/login.html";
+        window.location.href = "https://127.0.0.1:5500/login.html";
       }, 3000);
     })
     .catch((error) => {
@@ -58,7 +58,7 @@ const resetPassword = (e) => {
   console.log(uidb64,token,password)
   const resp = axios({
     method: "PATCH",
-    url:  "http://localhost:8000/api/auth/password-reset-complete",
+    url:  `${BACKEND_URL}/api/auth/password-reset-complete`,
     data: {
       password:password,
       token:token,
@@ -74,7 +74,7 @@ const resetPassword = (e) => {
           PASSWORD CHANGED!!
       </div>`;
       setTimeout(function () {
-        window.location.href = "http://127.0.0.1:5500/login.html";
+        window.location.href = "https://127.0.0.1:5500/login.html";
       }, 3000);
     })
     .catch((error) => {
@@ -93,7 +93,7 @@ const login = (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const url = "http://localhost:8000/api/auth/login/";
+  const url = `${BACKEND_URL}/api/auth/login/`;
   const method = "POST";
   axios({
     method: "POST",
@@ -111,7 +111,7 @@ const login = (e) => {
       const refresh = response.data.refresh;
       localStorage.setItem("token", access);
       localStorage.setItem("refresh", refresh);
-      window.location.href = "http://127.0.0.1:5500/index.html";
+      window.location.href = "https://127.0.0.1:5500/index.html";
     })
     .catch((error) => {
       console.log(error);
@@ -129,20 +129,20 @@ const checkToken = () => {
   const token = localStorage.getItem("token");
   console.log(token);
   if (token != null) {
-    window.location.href = "http://127.0.0.1:5500/index.html";
+    window.location.href = "https://127.0.0.1:5500/index.html";
   }
 };
 const checkIndexToken = () => {
   const token = localStorage.getItem("token");
   console.log(token);
   if (token == null) {
-    window.location.href = "http://127.0.0.1:5500/login.html";
+    window.location.href = "https://127.0.0.1:5500/login.html";
   }
 };
 const logout = () => {
   const token = localStorage.getItem("token");
   const refresh = localStorage.getItem("refresh");
-  const url = "http://localhost:8000/api/auth/logout";
+  const url = `${BACKEND_URL}/api/auth/logout`;
 
   axios({
     method: "POST",
@@ -174,7 +174,7 @@ const sendMail = (e) => {
   const email = document.getElementById("email").value;
   const redirect_url = "http://127.0.0.1:5500/reset.html"
 
-  const url = "http://localhost:8000/api/auth/request-reset-email/";
+  const url = `${BACKEND_URL}/api/auth/request-reset-email/`;
   const method = "POST";
   const resp = axios({
     method: "POST",
