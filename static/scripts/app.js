@@ -32,7 +32,7 @@ const submitForm = (e) => {
           User Registration Successful!!
       </div>`;
       setTimeout(function () {
-        window.location.href = "https://127.0.0.1:5500/login.html";
+        window.location.href = "https://authapp-salt.netlify.app/login.html";
       }, 3000);
     })
     .catch((error) => {
@@ -74,7 +74,7 @@ const resetPassword = (e) => {
           PASSWORD CHANGED!!
       </div>`;
       setTimeout(function () {
-        window.location.href = "https://127.0.0.1:5500/login.html";
+        window.location.href = "https://authapp-salt.netlify.app/login.html";
       }, 3000);
     })
     .catch((error) => {
@@ -111,7 +111,7 @@ const login = (e) => {
       const refresh = response.data.refresh;
       localStorage.setItem("token", access);
       localStorage.setItem("refresh", refresh);
-      window.location.href = "https://127.0.0.1:5500/index.html";
+      window.location.href = "https://authapp-salt.netlify.app/index.html";
     })
     .catch((error) => {
       console.log(error);
@@ -129,14 +129,14 @@ const checkToken = () => {
   const token = localStorage.getItem("token");
   console.log(token);
   if (token != null) {
-    window.location.href = "https://127.0.0.1:5500/index.html";
+    window.location.href = "https://authapp-salt.netlify.app/index.html";
   }
 };
 const checkIndexToken = () => {
   const token = localStorage.getItem("token");
   console.log(token);
   if (token == null) {
-    window.location.href = "https://127.0.0.1:5500/login.html";
+    window.location.href = "https://authapp-salt.netlify.app/login.html";
   }
 };
 const logout = () => {
