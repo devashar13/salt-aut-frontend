@@ -159,7 +159,7 @@ const logout = () => {
     .then((response) => {
       localStorage.removeItem("token");
       localStorage.removeItem("refresh");
-      window.location.href = "http://127.0.0.1:5500/login.html";
+      window.location.href = "https://authapp-salt.netlify.app/login.html";
     })
     .catch((error) => {
       console.log(error);
@@ -172,7 +172,7 @@ const logout = () => {
 const sendMail = (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
-  const redirect_url = "http://127.0.0.1:5500/reset.html"
+  const redirect_url = "https://authapp-salt.netlify.app/reset.html"
 
   const url = `${BACKEND_URL}/api/auth/request-reset-email/`;
   const method = "POST";
@@ -193,7 +193,7 @@ const sendMail = (e) => {
           EMAIL SENT!!
       </div>`;
       setTimeout(function () {
-        window.location.href = "http://127.0.0.1:5500/login.html";
+        window.location.href = "https://authapp-salt.netlify.app/login.html";
       }, 3000);
     })
     .catch((error) => {
